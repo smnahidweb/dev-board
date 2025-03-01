@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover New Knowledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100">
+    
+    <section class="mx-auto container  bg-white rounded-lg p-4 mb-10 ">
+        <nav class="flex justify-between ">
+          <div class="flex gap-3">
+              <img src="assets/logo.png" alt="">
+              <h2 class="text-4xl"> <span class="font-light" >Dev</span><span class="font-bold">Board</span> </h2>
+          </div>
+      
+          <div class="flex gap-20 justify-around">
+      
+          
+              
+          </div>
+        
+          <div>
+            <button id="back-btn" class="btn btn-primary">Back to Desk</button>
+          </div>
+          
+        </nav>
+      </section>
+
+<h2 class="text-2xl font-bold text-center">Blogs</h2>
+<div class="mx-auto container bg-white rounded-md p-5 mb-2 mt-10">
+   <div class="mb-8">
+    <h3 class="text-3xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h3>
+   </div>
+   <hr class="border-t-2 border-gray-200 border-dashed mb-3">
+    <p class="text-xl">There are many different ways to select an element in the dom such as - </p>
+    <ol class="text-xl" type="1">
+        <li>1.ByID - getElementById</li>
+        <li>2.ByClassname - getElementByClassname</li>
+        <li>3.By TagName - getElementsByTagName </li>
+        <li>4.By Name Attribute - getElementsByName</li>
+        <li>5.Using parentNode and children Properties</li>
+        <li>6.By CSS Selector - querySelectorAll etc</li>
+    </ol>
+</div>
+
+<div class="mx-auto container bg-white rounded-md p-5 mt-3">
+<div class="mb-8" >
+    <h3 class="text-3xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+</div>
+<hr class="border-t-2 border-gray-200 border-dashed mb-3">
+<p class="text-xl">There are some difference between innerHTML and innerText. if i use innerHTML, it includes all html elements inside the innerHTML may be it will include div,p,h2 tags so on 
+    On the other hand , if i use innerText, it include only the text from html element like if i have p tag and inside the p tag , "this is discover New " is written. when i use innerText , i will get "this is discover New" only.
+    /p>
+</div>
+
+<div class="mx-auto container bg-white rounded-md p-5 mt-3">
+    <div class="mb-8">
+        <h3 class="text-3xl font-bold">Question-3: What is event delegation in the DOM?</h3>
+    </div>
+    <hr class="border-t-2 border-gray-200 border-dashed mb-3">
+    <p class="text-xl">Event delegation is the java script method that maintain event bubbling using by single event listener to a parent element instead of multiple child elements. when When an event occurs, it propagates up the DOM hierarchy, allowing us to capture and handle it using event.target. This method optimizes performance, simplifies code management, and ensures seamless event handling, even for dynamically generated elements</p>
+
+</div>
+
+<div class="mx-auto container bg-white rounded-md p-5 mt-3">
+<div class="mb-8">
+    <h2 class="text-3xl font-bold">Question-4: What is event bubbling in the DOM?</h2>
+</div>
+<hr class="border-t-2 border-gray-200 border-dashed mb-3">
+    <p class="text-xl">Event bubbling is java script mechanism where event triggered on a child element first executes its own event handler and then propagates (or "bubbles up") to its parent and ancestor elements. 
+
+    if we have multiple child node, and if i make triggered in the parent node, then all child node will be exccuted. but if i use event.stopPropagation() in the specific child  then it will stop and dont upword bubbling.
+    we have another method that is event.ImmidiatedStopPropagation(), then it prevents others listener on the same elements.  
+    </p>
+</div>
+
+<div class="mx-auto container bg-white rounded-md p-5 mt-3 pb-14">
+    <div class="mb-8">
+        <h2 class="text-3xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+    </div>
+    <hr class="border-t-2 border-gray-200 border-dashed mb-3">
+    <p class="text-xl">I can do so many things using by create, add and remove such as, if if i created new element then we can use create ,(document.creteElement("p"), so p tag will be created in the parent node) 
+
+    if i use add, we can add any thing inside the element. suppose i am going to add new class in new created elements, now we can use add (document.classList.add("bg-gray-100" then gray background color is added in the new element))
+   and we can use  remove() for anything remove from elements that means The remove() method in JavaScript is used to delete an element from the DOM. When called on an element, it removes that element from its parent node.
+   element.classList.remove("bg-gray-100"), that means in the elements, our bg-gray-100 color will be deleted
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+     
+  document.getElementById("back-btn").addEventListener("click",function(){
+
+    window.location.href="index.html";
+
+  })
+
+
+   </script>
+</body>
+</html>

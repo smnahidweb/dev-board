@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <section class="mx-auto container mt-5 bg-white rounded-lg p-4 ">
+        <nav class="flex justify-between ">
+          <div class="flex gap-3">
+              <img src="assets/logo.png" alt="">
+              <h2 class="text-4xl"> <span class="font-light" >Dev</span><span class="font-bold">Board</span> </h2>
+          </div>
+      
+          <div class="flex gap-20 justify-around">
+      
+          <div class="flex gap-4">
+              <img class="h-7" src="assets/checkbox.png" alt="">
+              <h2 id="increment" class="text-2xl font-bold"> 23</h2>
+          </div>
+       
+          <div>
+              <img src="assets/theme-btn.png" alt="">
+          </div>
+      
+          </div>
+        </nav>
+      </section>
+    <div class="max-w-6xl mx-auto grid grid-cols-12 gap-4 mt-4">
+        
+        <!-- Header Section -->
+        <div class="col-span-9 flex gap-5 justify-between items-center bg-white p-4 rounded-lg shadow">
+            <div class="flex gap-4 items-center space-x-2 bg-blue-100 px-4 py-2 rounded-lg h-32">
+            <div>
+                <img src="assets/checkbox.png" alt="">
+            </div>
+            <div>
+                <h2>Task Assigned</h2>
+                <h2 id="task-count">6</h2>
+            </div>
+            </div>
+            <div id="discover-new" class="h-32 w-6/12 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg flex items-center space-x-2">
+                <img src="assets/board.png" alt="Calendar" class=>
+                <h1 class="text-lg font-semibold">Discover Something <br> New Today!</h1>
+            </div>
+            <div class="flex h-32 gap-3 items-center bg-blue-100 px-4 py-2 rounded-lg">
+                <img src="assets/calender.png" alt="Calendar" class="w-6 h-6">
+                <div>
+                    <h2 id ="current-day" ></h2>
+                    <h2 id="current-date" ></h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Left Section -->
+        <div class="col-span-9 space-y-4">
+            <!-- Task List -->
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Task Card -->
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-24 px-4">ShopEase</div>
+                    <h2  class="text-lg font-semibold mt-2 task-title">Fix Mobile Button Issue</h2>
+                   <div class="bg-slate-100 p-2 rounded-sm">
+                    <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                   </div>
+                   <div class="flex justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                         21 March 2025</p>
+                        
+                    </div>
+                    <div>
+                        <button id="btn-1" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                    </div>
+                   </div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-24 px-4">CloudSync</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title">Add Dark Mode</h2>
+                    <div class="bg-slate-100 p-2 rounded-sm">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                       </div>
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                             21 March 2025</p>
+                            
+                        </div>
+                        <div>
+                            <button id="btn-2" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                        </div>
+                       </div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-24 px-4">SwiftPay</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title">Optimize Home Page</h2>
+                    <div class="bg-slate-100 p-2 rounded-sm">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                       </div>
+                       
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                             21 March 2025</p>
+                            
+                        </div>
+                        <div>
+                            <button id="btn-3" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                        </div>
+                       </div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-24 px-4">Meta</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title">Add new emoji</h2>
+                    <div class="bg-slate-100 p-2 rounded-sm">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                       </div>
+                       
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                             21 March 2025</p>
+                            
+                        </div>
+                        <div>
+                            <button id="btn-4" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                        </div>
+                       </div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-36 px-4">Google LLC</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title">Integrate OpenAI API</h2>
+                    <div class="bg-slate-100 p-2 rounded-sm">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                       </div>
+                       <div class="flex justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                             21 March 2025</p>
+                            
+                        </div>
+                        <div>
+                            <button id="btn-5" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                        </div>
+                       </div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-md task-card">
+                    <div class="bg-slate-200 rounded-full w-24 px-4">Glassdoor</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title">Improve Job Searching</h2>
+                    <div class="bg-slate-100 p-2 rounded-sm">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                       </div>
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600 mt-2">Deadline: <br>
+                             21 March 2025</p>
+                            
+                        </div>
+                        <div>
+                            <button id="btn-6" class="btn btn-primary btn-sm mt-3 w-full btn-completed">Completed</button>
+                        </div>
+                       </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Section - Activity Log -->
+        <div class= "col-span-3 bg-white p-4 rounded-lg shadow-md">
+            <div class="flex gap-2 items-center ml-16">
+
+           <div>
+            <img src="assets/activity.png" alt="">
+           </div>
+
+           <div>
+            <h2 class="text-lg font-semibold">Activity Log</h2>
+           </div>
+
+            </div>
+            <button id="clear-history" class="btn btn-primary btn-sm mt-4 ml-16 ">Clear History</button>
+            <div id="history-container" class="mt-4 text-sm text-gray-600 space-y-2 border-red-500 ">
+                
+            </div>
+        </div>
+        
+    </div>
+    <script>
+      
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let todayDay = new Date().getDay();
+
+
+let now = new Date();
+let TodayDate = { year: 'numeric', month: 'long', day: 'numeric' };
+
+// Set the current day and date in the respective <p> tags
+document.getElementById("current-day").innerText =  days[todayDay];
+document.getElementById("current-date").innerText =  now.toLocaleDateString("en-US", TodayDate);
+
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
