@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-6">
+<body id="body-color" class= "bg-blue-100">
 
     <!-- Top Navigation -->
     <section class="mx-auto container mt-5 bg-white rounded-lg p-4 shadow-md">
@@ -22,8 +22,8 @@
                     <img class="h-7" src="assets/checkbox.png" alt="Checkbox">
                     <h2 id="increment" class="text-2xl font-bold">23</h2>
                 </div>
-                <div>
-                    <img src="assets/theme-btn.png" alt="Theme Button">
+                <div id="ring-btn">
+                    <button id="ring-btn"><img src="assets/theme-btn.png" alt="Theme Button"></button>
                 </div>
             </div>
         </nav>
@@ -33,7 +33,7 @@
     <div class=" mx-auto container grid grid-cols-12 gap-4 mt-6">
 
         <!-- Left Section (Tasks) -->
-        <div class="col-span-9 flex flex-col h-full space-y-4">
+        <div class="col-span-9 flex flex-col h-full space-y-4 bg-white mb-10">
             
             <!-- Header Section -->
             <div class="flex gap-5 justify-between items-center bg-white p-4 rounded-lg shadow">
@@ -41,7 +41,7 @@
                     <img src="assets/checkbox.png" alt="">
                     <div>
                         <h2>Task Assigned</h2>
-                        <h2 id="task-count">6</h2>
+                        <h2 id="task-count" class="text-2xl font-bold">06</h2>
                     </div>
                 </div>
                 <div id="discover-new" class="h-32 w-6/12 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg flex items-center">
@@ -51,20 +51,20 @@
                 <div class="flex h-32 gap-3 items-center bg-blue-100 px-4 py-2 rounded-lg">
                     <img src="assets/calender.png" alt="Calendar" class="w-6 h-6">
                     <div>
-                        <h2 id="current-day"></h2>
-                        <h2 id="current-date"></h2>
+                        <h2 class="text-xl font-bold" id="current-day"></h2>
+                        <h2 class="text-xl font-bold" id="current-date"></h2>
                     </div>
                 </div>
             </div>
 
             <!-- Task List -->
-            <div class="grid grid-cols-3 gap-4 flex-grow">
+            <div class="grid grid-cols-3 gap-4 flex-grow bg-white">
                 <!-- Task Card 1 -->
-                <div class="bg-white p-4 rounded-lg shadow-md task-card p-6">
-                    <div class="bg-slate-200 rounded-full w-24 px-4">ShopEase</div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Fix Mobile Button Issue</h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
-                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping...</p>
+                <div class="bg-blue-100 p-4 rounded-lg shadow-md task-card ml-4 mr-4">
+                    <div class=" bg-white rounded-full w-24 px-4">ShopEase</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Fix Mobile Button Issue</h2>
+                    <div class="bg-white p-2 rounded-sm mb-5">
+                        <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlapping To fix mobile button issues, check for overlapping element.</p>
                     </div>
                     <div class="flex justify-between mt-2">
                         <p class="text-sm font-medium text-gray-600">Deadline: <br> 21 March 2025</p>
@@ -73,10 +73,10 @@
                 </div>
 
                 <!-- Task Card 2 -->
-                <div class="bg-white p-4 rounded-lg shadow-md task-card">
-                    <div class="bg-slate-200 rounded-full w-24 px-4">CloudSync</div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Add Dark Mode</h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
+                <div class=" p-4 rounded-lg shadow-md task-card bg-blue-100 ml-4  mr-4">
+                    <div class="bg-white rounded-full w-24 px-4">CloudSync</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Add Dark Mode</h2>
+                    <div class="bg-white p-2 rounded-sm mb-5">
                         <p class="text-sm text-gray-500">To add dark mode, use CSS media queries to detect the user's preference (prefers-color-scheme: dark). 
                     </div>
                     <div class="flex justify-between mt-2">
@@ -86,21 +86,21 @@
                 </div>
 
                 <!-- Task Card 3 -->
-                <div class="bg-white p-4 rounded-lg shadow-md task-card ">
-                    <div class="bg-slate-200 rounded-full w-24 px-4">SwiftPay</div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Optimize Home Page</h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
-                        <p class="text-sm text-gray-500">Improve page load speed and SEO...</p>
+                <div class="bg-blue-100 p-4 rounded-lg shadow-md task-card ml-4  mr-4">
+                    <div class="bg-white rounded-full w-24 px-4">SwiftPay</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Optimize Home Page</h2>
+                    <div class="bg-white p-2 rounded-sm mb-5">
+                        <p class="text-sm text-gray-500"> A homepage can rank for relevant non-branded keywords and help other pages on your site. </p>
                     </div>
                     <div class="flex justify-between mt-2">
                         <p class="text-sm font-medium text-gray-600">Deadline: <br> 21 March 2025</p>
                         <button class="btn btn-primary btn-sm btn-completed">Completed</button>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md task-card">
-                    <div class="bg-slate-200 rounded-full w-24 px-4">Meta</div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Add new emoji</h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
+                <div class="bg-blue-100 p-4 rounded-lg shadow-md task-card ml-4  mr-4 mb-4">
+                    <div class="bg-white rounded-full w-24 px-4">Meta</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Add new emoji</h2>
+                    <div class="bg-white p-2 rounded-sm mb-5">
                         <p class="text-sm text-gray-500">Add a new emoji using its Unicode or HTML entity to enhance engagement and visuals.</p>
                     </div>
                     <div class="flex justify-between mt-2">
@@ -108,10 +108,10 @@
                         <button class="btn btn-primary btn-sm btn-completed">Completed</button>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md task-card">
-                    <div class="bg-slate-200 rounded-full w-32 px-4 ">Google LLC</div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Integrate OpenAI API</h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
+                <div class="bg-blue-100 p-4 rounded-lg shadow-md task-card ml-4  mr-4 mb-4">
+                    <div class="bg-white rounded-full w-32 px-4 ">Google LLC</div>
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Integrate OpenAI API</h2>
+                    <div class="bg-white p-2 rounded-sm mb-5">
                         <p class="text-sm text-gray-500">Integrate OpenAI API by getting an API key and making HTTP requests to interact.</p>
                     </div>
                     <div class="flex justify-between mt-2">
@@ -119,12 +119,12 @@
                         <button class="btn btn-primary btn-sm btn-completed">Completed</button>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md task-card ">
-                    <div class="bg-slate-200 rounded-full w-24 px-4">Glassdoor
+                <div class="bg-blue-100 p-4 rounded-lg shadow-md task-card ml-4 mr-4 mb-4">
+                    <div class="bg-white rounded-full w-24 px-4">Glassdoor
                     </div>
-                    <h2 class="text-lg font-semibold mt-2 task-title">Improve Job Searching
+                    <h2 class="text-lg font-semibold mt-2 task-title mb-3">Improve Job Searching
                     </h2>
-                    <div class="bg-slate-100 p-2 rounded-sm">
+                    <div class="bg-white p-2 rounded-sm mb-5">
                         <p class="text-sm text-gray-500">Improve job searching by using job boards, networking, customizing resumes, and leveraging LinkedIn connections.</p>
                     </div>
                     <div class="flex justify-between mt-2">

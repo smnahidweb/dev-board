@@ -65,20 +65,17 @@ let sum=6;
       window.location.href="discover.html";
        })
 
-       document.getElementById('back-btn').addEventListener("click",function(){
-        
-    //   alert("hi");
-        
-        });
+       
 
-        // for(let i=0;i< buttons.length;i++){
-    
-        //   if(buttons[i].disabled === true ){
-        //     let sum = sum-1;
-        //   }
-          
+       const collectionOfColors = ['bg-blue-400', 'bg-zinc-400','bg-green-400','bg-yellow-400','bg-red-400'];
+       
+         let index=0;
+        document.getElementById("ring-btn").addEventListener("click",function(){
+          const body = document.getElementById("body-color");
+          body.className = '';
+          body.classList.add(collectionOfColors[index]);
+          index = (index + 1) % collectionOfColors.length;
+       
+       })
 
-        // }
-        // if(sum === 0){
-        //   alert("hi");
-        // }
+      
