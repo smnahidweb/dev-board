@@ -9,7 +9,7 @@ const taskCountElement = document.getElementById("task-count").innerText;
 
 
         const buttons = document.querySelectorAll(".btn-completed");
-
+let sum=6;
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener("click", function() {
                 
@@ -27,6 +27,12 @@ const taskCountElement = document.getElementById("task-count").innerText;
                 const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true });
             const taskTitle = buttons[i].closest(".task-card").querySelector(".task-title").innerText;
 
+ 
+            if(buttons[i].disabled === true){
+            sum = sum -1
+            }
+            
+
             const div = document.createElement("div");
             div.classList.add("bg-gray-100")
             div.innerHTML = `
@@ -37,9 +43,14 @@ const taskCountElement = document.getElementById("task-count").innerText;
            parentHistory.appendChild(div);
            
            }
-
+            
+           if(sum===0){
+            alert("Cognates !! You have completed all the current tasks");
+           }
             });
+
         }
+          
 
         
        document.getElementById("clear-history").addEventListener("click",function(){
@@ -59,3 +70,15 @@ const taskCountElement = document.getElementById("task-count").innerText;
     //   alert("hi");
         
         });
+
+        // for(let i=0;i< buttons.length;i++){
+    
+        //   if(buttons[i].disabled === true ){
+        //     let sum = sum-1;
+        //   }
+          
+
+        // }
+        // if(sum === 0){
+        //   alert("hi");
+        // }
