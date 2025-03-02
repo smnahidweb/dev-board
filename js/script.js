@@ -34,7 +34,7 @@ let sum=6;
             
 
             const div = document.createElement("div");
-            div.classList.add('bg-blue-100', 'p-5', 'rounded-md','mb-4')
+            div.classList.add('bg-blue-50', 'p-5', 'rounded-md','mb-4')
             div.innerHTML = `
             
             <p> You have completed the task <b> ${taskTitle} </b> at ${time} </p>
