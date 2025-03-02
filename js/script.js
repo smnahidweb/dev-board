@@ -62,7 +62,7 @@ let sum=6;
 
        document.getElementById('discover-new').addEventListener("click",function(event){
        
-      window.location.href="discover.html";
+      window.location.href="main.html";
        })
 
        
